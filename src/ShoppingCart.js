@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import {DropTarget} from 'react-dnd';
-
+import constants from './constants';
 const ShoppingCartSpec = {
     drop(){
         return {name: 'ShoppingCart'};
@@ -42,4 +42,4 @@ class ShoppingCart extends Component{
 //     isOver: PropTypes.bool.isRequired,
 //     canDrop:PropTypes.bool.isRequired
 // }
-export default DropTarget("snack", ShoppingCartSpec,collect)(ShoppingCart);
+export default DropTarget(constants.SNACK, ShoppingCartSpec,collect)(ShoppingCart);
